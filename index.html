@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Anniversary!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg1">
+    <h1>Scan to Celebrate ❤️</h1>
+    <div class="heart animate-heart-red"></div>
+    <div id="qr"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        new QRCode(document.getElementById("qr"), {
+            text: window.location.href.replace("index.html","heart.html"),
+            width: 220,
+            height: 220
+        });
+    </script>
+</body>
+</html>

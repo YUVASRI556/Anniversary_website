@@ -1,0 +1,129 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+h1, h2 {
+    margin-top: 30px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button, .btn {
+    background: #ff4081;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Background Colors */
+.bg1 { background: #ff9aa2; }
+.bg2 { background: #ffb7b2; }
+.bg3 { background: #ffdac1; }
+.bg4 { background: #e2f0cb; }
+
+/* Heart Base */
+.heart {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 40px auto 20px;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Red Heart */
+.animate-heart-red {
+    background: red;
+}
+.animate-heart-red:before {
+    top: -75px; left: 0; background: red;
+}
+.animate-heart-red:after {
+    left: 75px; top: 0; background: red;
+}
+.animate-heart-red {
+    animation: pulse 1.2s infinite;
+}
+
+/* Rainbow Heart */
+.animate-heart-rainbow {
+    background: linear-gradient(45deg, #ff0000, #ffdd00, #00ff00, #00ddff, #ff00ff);
+    background-size: 300% 300%;
+}
+.animate-heart-rainbow:before {
+    top: -75px; left: 0; background: inherit;
+}
+.animate-heart-rainbow:after {
+    left: 75px; top: 0; background: inherit;
+}
+.animate-heart-rainbow {
+    animation: rainbow 3s infinite;
+}
+
+/* Pink Heart */
+.animate-heart-pink {
+    background: #ff4081;
+}
+.animate-heart-pink:before {
+    top: -75px; left: 0; background: #ff4081;
+}
+.animate-heart-pink:after {
+    left: 75px; top: 0; background: #ff4081;
+}
+.animate-heart-pink {
+    animation: pulse 1.5s infinite;
+}
+
+/* Blue Heart */
+.animate-heart-blue {
+    background: #42a5f5;
+}
+.animate-heart-blue:before {
+    top: -75px; left: 0; background: #42a5f5;
+}
+.animate-heart-blue:after {
+    left: 75px; top: 0; background: #42a5f5;
+}
+.animate-heart-blue {
+    animation: pulse 1.8s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.2) rotate(-45deg); }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Slideshow */
+.slide-img {
+    width: 80%;
+    max-width: 600px;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    margin-top: 25px;
+}
